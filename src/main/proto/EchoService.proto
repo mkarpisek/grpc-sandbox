@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package net.karpisek.grpcsandbox;
+
+message EchoRequest {
+	string text = 1;
+}
+
+message EchoResponse {
+    string text = 1;
+}
+
+service EchoService {
+    rpc echo(EchoRequest) returns (EchoResponse);
+}
